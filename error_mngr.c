@@ -15,7 +15,7 @@ void printing_error(size_t loop_cnt, char *argv, char **tok_arry)
 	size_t dig_amount = counting_digt(loop_cnt);
 	size_t tok_len1 = own_strlen(tok_arry[0]), tok_len2 = own_strlen(tok_arry[1]);
 	size_t argv_len = own_strlen(argv);
-	size_t total_alloc = argv_len + dig_amount + token_len1 + tok_len2 + 6;
+	size_t total_alloc = argv_len + dig_amount + tok_len1 + tok_len2 + 6;
 
 	switch (err_msg)
 	{
@@ -33,7 +33,7 @@ void printing_error(size_t loop_cnt, char *argv, char **tok_arry)
 			return;
 	}
 
-	loop_num = alloc_mngr(loop_num, (sizeof(char) * (digit_amount + 1)));
+	loop_num = alloc_mngr(loop_num, (sizeof(char) * (dig_amount + 1)));
 	own_itoa(loop_cnt, loop_num, 10);
 
 	err_cus_len = own_strlen(err_cus);

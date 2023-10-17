@@ -35,7 +35,7 @@ char *reverse_string(char *input_str)
 }
 
 /**
-  * freeing_static_memorylst - Frees pointr
+  * freeing_static_memlst - Frees pointr
   * @head:- pointer
   */
 
