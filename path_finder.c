@@ -21,7 +21,8 @@ char **getting_pathh(char *const *argv)
 		{
 			path_pointer = &environ[env_i][5];
 			path_counter = counting_path(path_pointer);
-			pat = (char **)alloc_mngr((char *)pat, (sizeof(char *) * (path_counter + 1)));
+			pat = (char **)alloc_mngr((char *)pat,
+			(sizeof(char *) * (path_counter + 1)));
 
 			for (p_j = 0; p_j < path_counter; p_j++)
 			{
