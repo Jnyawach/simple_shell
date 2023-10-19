@@ -2,9 +2,9 @@
 #include "main.h"
 
 /**
-  * getting_pathh - Get path
-  * @argv:- comand argument
-  * Return:- tru 0
+  * getting_pathh - Get paths
+  * @argv:- CMD args
+  * Return:- Always 0
   */
 
 char **getting_pathh(char *const *argv)
@@ -22,7 +22,7 @@ char **getting_pathh(char *const *argv)
 			path_pointer = &environ[env_i][5];
 			path_counter = counting_path(path_pointer);
 			pat = (char **)alloc_mngr((char *)pat,
-			(sizeof(char *) * (path_counter + 1)));
+				(sizeof(char *) * (path_counter + 1)));
 
 			for (p_j = 0; p_j < path_counter; p_j++)
 			{
@@ -45,7 +45,7 @@ char **getting_pathh(char *const *argv)
 }
 
 /**
-  * checking_path - function to check path
+  * checking_path - function that checks path
   * @argv:- commandline args
   * Return:- Always 0
   */
@@ -69,7 +69,7 @@ size_t checking_path(char *const *argv)
 }
 
 /**
-  * counting_path - function to return the path cnt
+  * counting_path - function that return path cnt
   * @pat:- environ Path
   * Return:- Always 0
   */
@@ -96,8 +96,8 @@ size_t counting_path(char *pat)
 }
 
 /**
-  * length_path - function that taks path
-  * @pat_pointer:- pointr to the path current
+  * length_path - function that is taks path
+  * @pat_pointer:- ptr to path current
   * Return:- Always 0
   */
 
@@ -115,3 +115,4 @@ size_t length_path(char *pat_pointer)
 
 	return (j);
 }
+

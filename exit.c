@@ -4,14 +4,14 @@ int is_num(char let);
 int own_atoi(char *status);
 
 /**
- * bltin_exit - Exits shell CLI
- * @argv: Exits with Shell status
+ * bltin_exit - Will exit shell
+ * @argv: Shell exit status
  *
  * Return: Exits shell or returns EXIT_FAILURE
  */
 int bltin_exit(char *const *argv)
 {
-	int awl;
+	int aws;
 
 	if (argv[1] == NULL)
 	{
@@ -21,24 +21,24 @@ int bltin_exit(char *const *argv)
 	}
 	else
 	{
-		awl = own_atoi(argv[1]);
+		aws = own_atoi(argv[1]);
 
-		switch (awl)
+		switch (aws)
 		{
 			case (-1):
 				return (EXIT_FAILURE);
 			default:
 				freeing_memlst(&mem_head);
 				freeing_static_memlst(&static_mem_head);
-				exit(awl);
+				exit(aws);
 		}
 	}
 }
 
 /**
- * is_num - Checks of Char is Num
+ * is_num - If a char is a num
  * @let: Inputed char
- * Return: Success 1 : Failure 0
+ * Return: 1 Success, 0 Failure
  */
 int is_num(char let)
 {
@@ -49,13 +49,13 @@ int is_num(char let)
 }
 
 /**
- * own_atoi - Convert string to number
- * @status: Input string
+ * own_atoi - Convert str to num
+ * @status: Inpute Str
  * Return: Status as an int or -1
  */
 int own_atoi(char *status)
 {
-	int awl = 0;
+	int aws = 0;
 	int i = 0;
 
 	if (status[i] == '-')
@@ -65,16 +65,16 @@ int own_atoi(char *status)
 	{
 		if (is_num(status[i]))
 		{
-			awl = awl * 10 + status[i] - '0';
+			aws = aws * 10 + status[i] - '0';
 		}
 		else
 			return (-1);
 	}
-	if (awl > 2147483647)
+	if (aws > 2147483647)
 	{
 		return (-1);
 	}
 	else
-		return (awl);
+		return (aws);
 }
 

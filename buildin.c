@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
-  * cd_Home - change the directory to home
-  * Return:- Alway 0
+  * cd_Home - changes directory to home
+  * Return:- 0 Always
   */
 int cd_Home(void)
 {
@@ -26,8 +26,8 @@ int cd_Home(void)
 
 
 /**
-  * dir_change - chnage the directory
-  * @argv:- The executed command
+  * dir_change - changes directory
+  * @argv:- executed command
   * Return:- 0 Always
   */
 int dir_change(char *const *argv)
@@ -65,8 +65,8 @@ int dir_change(char *const *argv)
 	return (0);
 }
 /**
- * cd_cur - Change the directory to home
- * Return: Success 0, Failure -1
+ * cd_cur - changes directory to home
+ * Return: 0 Success, -1 Failure
  */
 
 int cd_cur(void)
@@ -91,8 +91,8 @@ int cd_cur(void)
 	return (-1);
 }
 /**
-  * cd_prev - Change directory to previous
- * Return: Success 0, Failure -1
+  * cd_prev - changes to prev directory
+ * Return: 0 Success, -1 Failure
  */
 int cd_prev(void)
 {
@@ -117,8 +117,8 @@ int cd_prev(void)
 }
 
 /**
- * parent_cd - Changes to parent directory
- * Return: Success 0, Failure -1
+ * parent_cd - changes to parent directory
+ * Return: 0 on Success, 1 on Failure
  */
 int parent_cd(void)
 {

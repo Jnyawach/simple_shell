@@ -35,7 +35,7 @@ char *reverse_string(char *input_str)
 }
 
 /**
-  * freeing_static_memlst - Frees pointr
+  * freeing_static_memlst - Frees ptr
   * @head:- pointer
   */
 
@@ -60,5 +60,6 @@ void freeing_static_memlst(mem_list **head)
 		*head = NULL;
 	}
 }
+
 
 

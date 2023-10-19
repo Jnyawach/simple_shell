@@ -3,8 +3,8 @@
 char *three_case(char *errcus, char **token_array);
 
 /**
- * printing_error - Printed Error
- * @argv: Carry the shell name
+ * printing_error - Error printed
+ * @argv: Carries th shell name
  * @tok_arry: The needed token for error message
  * @loop_cnt: Shell loop iteration
  */
@@ -12,10 +12,11 @@ void printing_error(size_t loop_cnt, char *argv, char **tok_arry)
 {
 	char *tagged_err = NULL, *loop_num = NULL, *err_cus = NULL;
 	size_t err_cus_len, tagged_err_len;
-	size_t dig_amount = counting_digt(loop_cnt);
-	size_t tok_len1 = own_strlen(tok_arry[0]), tok_len2 = own_strlen(tok_arry[1]);
+	size_t digit_amount = counting_digt(loop_cnt);
+	size_t token1_len = own_strlen(tok_arry[0]);
+	size_t token2_len = own_strlen(tok_arry[1]);
 	size_t argv_len = own_strlen(argv);
-	size_t total_alloc = argv_len + dig_amount + tok_len1 + tok_len2 + 6;
+	size_t total_alloc = argv_len + digit_amount + token1_len + token2_len + 6;
 
 	switch (err_msg)
 	{
@@ -33,7 +34,7 @@ void printing_error(size_t loop_cnt, char *argv, char **tok_arry)
 			return;
 	}
 
-	loop_num = alloc_mngr(loop_num, (sizeof(char) * (dig_amount + 1)));
+	loop_num = alloc_mngr(loop_num, (sizeof(char) * (digit_amount + 1)));
 	own_itoa(loop_cnt, loop_num, 10);
 
 	err_cus_len = own_strlen(err_cus);
@@ -57,31 +58,31 @@ void printing_error(size_t loop_cnt, char *argv, char **tok_arry)
 }
 
 /**
- * three_case - Create a custom error message
+ * three_case - Error message
  * @errcus: Custom error message saved here
  * @token_array: The needed token for error message
  * Return: NULL or Pounter to error message
  */
 char *three_case(char *errcus, char **token_array)
 {
-	size_t tok_len1 = own_strlen(token_array[0]);
-	size_t tok_len2 = own_strlen(token_array[1]);
+	size_t token1_len = own_strlen(token_array[0]);
+	size_t token2_len = own_strlen(token_array[1]);
 
-	if (tok_len1 == 4)
+	if (token1_len == 4)
 	{
 		errcus = alloc_mngr(errcus, (sizeof(char) * 19));
 		errcus = ": Illegal number: \0";
 		return (errcus);
 	}
-	else if (tok_len1 == 2)
+	else if (token1_len == 2)
 	{
 		errcus = alloc_mngr(errcus, (sizeof(char) * 15));
 		errcus = ": can't cd to \0";
 		return (errcus);
 	}
 
-	errcus = alloc_mngr(errcus, sizeof(char) * tok_len1 + tok_len2 + 5);
-	own_strncpy(errcus, token_array[0], tok_len1);
+	errcus = alloc_mngr(errcus, sizeof(char) * token1_len + token2_len + 5);
+	own_strncpy(errcus, token_array[0], token1_len);
 	own_strcat(errcus, ": '");
 	own_strcat(errcus, token_array[1]);
 	own_strcat(errcus, "'");

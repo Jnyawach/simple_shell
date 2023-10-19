@@ -1,10 +1,10 @@
 #include "main.h"
 
 /**
- * bltin_env - Print env
- * @argv: as the command table
+ * bltin_env - Print procee env
+ * @argv: The command table
  *
- * Return: 0 true, -1 false
+ * Return: 0 Success, -1 Failure
  */
 int bltin_env(char *const *argv)
 {
@@ -29,3 +29,4 @@ int bltin_env(char *const *argv)
 	}
 	return (0);
 }
+

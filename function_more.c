@@ -2,10 +2,10 @@
 #include "main.h"
 
 /**
-  * own_strncpy - A function to copy Str
-  * @destination:- Str destination
-  * @source:- String
-  * @count:- Copied Bytes
+  * own_strncpy - Copies a str
+  * @destination:- The destination
+  * @source:- string
+  * @count:- bytes to copied
   * Return:- Success 0
   */
 
@@ -36,7 +36,7 @@ char *own_strncpy(char *destination, const char *source, size_t count)
 
 
 /**
-  * own_strlen - Get and return str length
+  * own_strlen - Gets & return str length
   * @string:- String
   * Return:- Always 0
   */
@@ -44,19 +44,19 @@ char *own_strncpy(char *destination, const char *source, size_t count)
 
 size_t own_strlen(char *string)
 {
-	size_t string_len = 0;
+	size_t str_len = 0;
 
 	if (string)
-		while (string[string_len] != '\0')
-			string_len++;
+		while (string[str_len] != '\0')
+			str_len++;
 
-	return (string_len);
+	return (str_len);
 }
 
 
 
 /**
-  * own_strcmp - Compare 2 strings
+  * own_strcmp - compares tw0 string
   * @string1:- str 1
   * @string2:- str 2
   * Return:- Always 0
@@ -134,24 +134,24 @@ int own_strncmp(char *string1, char *string2, size_t num)
 
 char *own_strcat(char *destination, char *source)
 {
-	int src_ind = 0;
-	int dest_ind = 0;
+	int source_index = 0;
+	int destination_index = 0;
 
 
-	for (; destination[dest_ind] != '\0';)
+	for (; destination[destination_index] != '\0';)
 	{
-		dest_ind++;
+		destination_index++;
 	}
 
-	for (; source[src_ind] != '\0';)
+	for (; source[source_index] != '\0';)
 	{
-		destination[dest_ind] = source[src_ind];
-		src_ind++;
-		dest_ind++;
+		destination[destination_index] = source[source_index];
+		source_index++;
+		destination_index++;
 	}
 
 
-	destination[dest_ind] = '\0';
+	destination[destination_index] = '\0';
 	return (destination);
 }
 

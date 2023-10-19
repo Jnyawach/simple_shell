@@ -2,11 +2,11 @@
 #include "main.h"
 
 /**
-  * _settingmem - This is responsible for setting memory
-  * @k:- Num of the bytes
+  * _settingmem - A function to set memory
+  * @k:- Num of bytes
   * @c:- const bytes
-  * @j:- the print location
-  * Return:- True as 0
+  * @j:- print location
+  * Return:- Success 0
   */
 
 char *_settingmem(char *j, char c, unsigned int k)
@@ -24,10 +24,10 @@ char *_settingmem(char *j, char c, unsigned int k)
 }
 
 /**
-  * own_realloc - Allocates the memory
-  * @sizenw:- The memory size
-  * @pointer:- The previuos allocation
-  * Return:- True as 0
+  * own_realloc - Allocates memory
+  * @sizenw:- New memory size
+  * @pointer:- Previuos allocation
+  * Return:- Success 0
   */
 
 char *own_realloc(char *pointer, size_t sizenw)
@@ -65,8 +65,8 @@ char *own_realloc(char *pointer, size_t sizenw)
 }
 
 /**
-  * freeing_memlst - Frees the memory
-  * @head:- Prints to the strct
+  * freeing_memlst - Frees memory
+  * @head:- Prints to strct
   */
 
 void freeing_memlst(mem_list **head)
@@ -92,10 +92,10 @@ void freeing_memlst(mem_list **head)
 }
 
 /**
-  * add_memnode - Joins the nodes
-  * @pointer:- Points to the new node
-  * @head:- Points to the previous node
-  * Return:- True as 0
+  * add_memnode - Links nodes
+  * @pointer:- Points to newly created node
+  * @head:- Points to the last node
+  * Return:- Success 0
   */
 
 mem_list *add_memnode(mem_list **head, char *pointer)
@@ -116,10 +116,10 @@ mem_list *add_memnode(mem_list **head, char *pointer)
 }
 
 /**
-  * alloc_mngr - Allocating space for memory
-  * @pointer:- Pointing to the new memory
-  * @siz:- the size limit
-  * Return:-  0
+  * alloc_mngr - Allocates space for memory
+  * @pointer:- Point to new memory
+  * @siz:- needed siz
+  * Return:- Always 0
   */
 
 
@@ -139,3 +139,4 @@ char *alloc_mngr(char *pointer, size_t siz)
 
 	return (pointer);
 }
+

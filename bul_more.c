@@ -1,35 +1,35 @@
 #include "main.h"
 
 /**
-  * counting_digt -Counts the digits
+  * counting_digt - count digits
   * @number:- Counted number
   * Return:- 0 Always
   */
 
 size_t counting_digt(size_t number)
 {
-	size_t digitctn = 0;
+	size_t digitcount = 0;
 
 	while (number != 0)
 	{
 		number /= 10;
-		digitctn++;
+		digitcount++;
 	}
 
-	return (digitctn);
+	return (digitcount);
 }
 
 /**
-  * own_itoa - Changes num to string
-  * @ba:- String base
-  * @buff:- String array
-  * @num:- Input
+  * own_itoa - chang num to string
+  * @ba:- The string base
+  * @buff:- an array of string
+  * @num:- The inpu
   * Return:- O Always
   */
 
 char *own_itoa(size_t num, char *buff, int ba)
 {
-	int sign = 1;
+	int signn = 1;
 	int idy = 0;
 	size_t remember = 0;
 
@@ -44,7 +44,7 @@ char *own_itoa(size_t num, char *buff, int ba)
 		buff[idy++] = '0' + remember;
 		num /= ba;
 	}
-	if (sign < 0)
+	if (signn < 0)
 	{
 		buff[idy++] = '-';
 	}
@@ -52,3 +52,4 @@ char *own_itoa(size_t num, char *buff, int ba)
 		buff[idy] = '\0';
 	return (reverse_string(buff));
 }
+

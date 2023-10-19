@@ -1,24 +1,24 @@
 #include "main.h"
 
 /**
-  * exec_mngr - CMD control to the rght flow
+  * exec_mngr - Control the CMD to right flow
   * @argv:- commandline arguements(CMD)
   * Return:- 0 Always
   */
 
 int exec_mngr(char *const *argv)
 {
-	int rght_value;
+	int right_value;
 
-	rght_value = exe_builtn(argv);
+	right_value = exe_builtn(argv);
 
-	if (rght_value == 0)
+	if (right_value == 0)
 		return (0);
 
 	if (err_msg == 2)
 	{
-		rght_value = (exe_extern(argv));
-		if (rght_value == 0)
+		right_value = (exe_extern(argv));
+		if (right_value == 0)
 			return (0);
 	}
 
@@ -26,7 +26,7 @@ int exec_mngr(char *const *argv)
 }
 
 /**
-  * exe_builtn - Excs the command
+  * exe_builtn - The command to be executed
   * @argv:- Tables
   * Return:- Always 0
   */
@@ -60,7 +60,7 @@ int exe_builtn(char *const *argv)
 }
 
 /**
-  * exe_extern - Will find external CMD
+  * exe_extern - Finds external CMD
   * @argv:- Table
   * Return:- 0 Always
   */

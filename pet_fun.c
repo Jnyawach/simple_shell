@@ -2,8 +2,8 @@
 #include "main.h"
 
 /**
- * tar_get - A function to copy the path from env file
- * @var_name: the targeted variable
+ * tar_get - A function to copy path from env
+ * @var_name: Targeted variable
  * Return: PATH on Success, NULL on Failure
  */
 char *tar_get(char *var_name)
@@ -175,3 +175,4 @@ int cd_arg(char *argv)
 	errno = ENOENT;
 	return (-1);
 }
+

@@ -19,12 +19,12 @@
 #define MAX_TTAL_ARGS 1024
 
 /**
- * struct allocation_history - Tracks and stores memory allocations
- * @mem_ptr: Pointer to allocated memory
- * @next: Pointer to the next node in the list
+ * struct allocation_history - tracks and stores allocations
+ * @mem_ptr: pointer to allocated memory
+ * @next: pointer to next node in list
  *
- * Description: This structure is used to store a pointer to each allocation,
- * allowing for better organization and more efficient memory deallocation.
+ * Description: stores a pointer to each allocation, allowing
+ * greater organization and more efficient freeing
  */
 typedef struct allocation_history
 {
@@ -34,9 +34,9 @@ typedef struct allocation_history
 } mem_list;
 
 /**
- * struct built_ins - Defines built-in commands and corresponding functions
- * @cmd: Name of the built-in command
- * @fp: Function pointer to execute the built-in command
+ * struct built_ins - Has builtin to handle
+ * @cmd: Pointer to char
+ * @fp: function to execute
  */
 typedef struct built_ins
 {
@@ -76,7 +76,7 @@ int allocating_mem(char *memory);
 char *alloc_mngr(char *pointer, size_t siz);
 int buffer_check(char *buf);
 
-/**** FUNCTIONS FOUND IN FILE own_strtoken.c ****/
+/***** FUNCTIONS FOUND IN FILE own_strtoken.c *****/
 /*size_t cnt_tokens(char *buffer);*/
 /*size_t tok_length(char *buf, size_t tokneed);*/
 char **own_strtok(char *buffer);

@@ -5,9 +5,9 @@ size_t cnt_tokens(char *buffer);
 size_t tok_length(char *buf, size_t tokneed);
 
 /**
-  * own_strtok - Token string
-  * @buffer:-  tokenized string
-  * Return:- true as 0
+  * own_strtok - Tokenizess string
+  * @buffer:- Str tokenized
+  * Return:- Success 0
   */
 
 char **own_strtok(char *buffer)
@@ -51,10 +51,10 @@ char **own_strtok(char *buffer)
 }
 
 /**
- * cnt_tokens - Counts number of tokens
- * @buf: String to be count
+ * cnt_tokens - Counts amount of tokens
+ * @buf: Str to be counted
  *
- * Return: sum of tokens
+ * Return: Total amount of tokens
  */
 size_t cnt_tokens(char *buf)
 {
@@ -71,11 +71,11 @@ size_t cnt_tokens(char *buf)
 }
 
 /**
- * tok_length - Length of the specific tokens
- * @buf: Token contained in the string
- * @tokneed: Number of needed tokens
+ * tok_length - Length of specified token
+ * @buf: Token contained string
+ * @tokneed: Specifies needed token
  *
- * Return: Length of the specific token
+ * Return: Length of the specified token
  */
 size_t tok_length(char *buf, size_t tokneed)
 {
@@ -99,3 +99,4 @@ size_t tok_length(char *buf, size_t tokneed)
 	}
 	return (toklen);
 }
+
